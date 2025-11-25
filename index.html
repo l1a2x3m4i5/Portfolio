@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laxmi B — Full-Stack (Java) Developer</title>
+  <meta name="description" content="Portfolio of a Java Backend & Full-Stack Developer — projects in Spring Boot, REST APIs, React, and JS.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="page">
+    <header>
+      <div class="brand">
+        <div class="logo" style="color:gray">LB</div>
+        <div>
+          <h1>Laxmi Bhadrapur</h1>
+          <p class="muted" style="color:white">Java Backend • Full-Stack Developer — Spring Boot, REST, React, SQL</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main" >
+        <a href="#projects"  style="color:white">Projects</a>
+        <a href="#about" style="color:white">About</a>
+        <a href="#contact" style="color:white">Contact</a>
+        <button class="theme-toggle" id="themeToggle" title="Toggle light/dark"  style="color:white">Toggle theme</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- LEFT -->
+      <section>
+        <div class="card hero reveal">
+          <div style="display:flex;gap:18px">
+            <div class="avatar">LB</div>
+            <div class="intro">
+              <h2>Hi, I'm Laxmi — Java & Full-Stack Developer</h2>
+              <p>I build scalable backend systems with Spring Boot and craft responsive frontends using modern JS. I focus on clean APIs, tests, and production-ready deployments.</p>
+
+              <div class="cta">
+                <a class="btn secondary" href="mailto:laxmibhadrapur596@gmail.com">Email me</a>
+                <a class="btn secondary" href="https://www.linkedin.com/in/laxmi-shekhappa-bhadrapura-7ba01229a/" target="_blank" rel="opener">LinkedIn</a>
+                <a class="btn secondary" href="https://github.com/l1a2x3m4i5" target="_blank" rel="opener">GitHub</a>
+                <a class="resume-badge" href="https://drive.google.com/file/d/135zdWQQfcAlzJ9fcXMwZbEs4wpP8KnZe/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="projects" class="card projects reveal" style="margin-top:18px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3>Selected Projects</h3>
+            <div class="filters" aria-hidden>
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="backend">Backend</button>
+              <button class="filter-btn" data-filter="frontend">Frontend</button>
+              <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Project 1 -->
+            <article class="project" data-tags="Fullstack" data-title="SalesSavvy E-Commerce Web App" data-repo="https://github.com/l1a2x3m4i5/SalesSavvyBackend" data-demo="https://salessavvy-demo.com" tabindex="0" role="button" aria-pressed="false">
+              <h4>SalesSavvy E-Commerce Web App</h4>
+              <p>Spring Boot service for online shopping & online payment integration (JWT auth, MySQL, scheduled jobs)</p>
+              <div class="tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JWT</span>
+                <span class="tag">HTML/JS</span>
+              </div>
+            </article>
+             <!-- Project 2 -->
+            <article class="project" data-tags="Fullstack" data-title="Image Steganography Using Python" data-repo="https://github.com/l1a2x3m4i5/Steganography" data-demo="https://steganography-demo.com" tabindex="0" role="button" aria-pressed="false">
+              <h4>Image Steganography Using Python</h4>
+              <p>Hiding sensitive information within an ordinary, non-secret file or message, so that it will not be detected.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+            </article>
+
+
+            <!-- Project 3 -->
+            <article class="project" data-tags="backend" data-title="Employee Management System" data-repo="https://github.com/l1a2x3m4i5/Employee-Management-System" data-demo="#">
+              <h4>Employee Management System</h4>
+              <p>Java Swing + Hibernate + MySQL for CRUD plus REST layer for web clients.</p>
+              <div class="tags"><span class="tag">Hibernate</span><span class="tag">MySQL</span></div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project" data-tags="frontend" data-title="Portfolio Website" data-repo="https://github.com/l1a2x3m4i5/Portfolio">
+              <h4>Personal Portfolio</h4>
+              <p>Custom responsive site using semantic HTML, CSS, and JS. Accessible & optimized.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+              </article>
+              <!-- Project 5 -->
+            <article class="project" data-tags="frontend" data-title="Movie Search Web App" data-repo="https://github.com/l1a2x3m4i5/OMDB_Movie-API">
+              <h4>Movie Search Web App</h4>
+              <p>Custom responsive site using semantic HTML, CSS, and JS. Accessible & optimized.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div id="about" class="card reveal" style="margin-top:18px">
+          <h3>About me</h3>
+          <p class="muted">I'm a Java Developer who builds backend systems in Spring Boot and delivers full stack features. I write clean code, design RESTful APIs, add unit/integration tests, and ship to cloud with Docker. I'm actively learning scalable frontend patterns and TypeScript.</p>
+
+          <h4 style="margin-top:12px">What I bring</h4>
+          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
+            <li>Designing & implementing REST APIs (Spring Boot)</li>
+            <li>Database design & optimization (MySQL)</li>
+            <li>End-to-end features: DB → API → Frontend</li>
+            <li>Deployment basics: Docker</li>
+          </ul>
+        </div>
+
+        <!-- Tech Skills -->
+        <div class="card reveal" style="margin-top:18px">
+          <h3>Tech Skills</h3>
+          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
+            <li><strong>Backend</strong> — Java, Python, Spring Boot, REST APIs, Hibernate, MySQL, MongoDB</li>
+            <li><strong>Frontend</strong> — HTML, CSS, JavaScript, React</li>
+            <li><strong>Database</strong> — MySQL, MongoDB, SQL optimization</li>
+            <li><strong>Tools & Platforms</strong> — Git, Docker, Maven, Postman</li>
+          </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="card reveal" style="margin-top:18px">
+          <h3>Soft Skills</h3>
+          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
+            <li><strong>Problem Solving</strong> — Break down complex problems, design scalable solutions</li>
+            <li><strong>Communication</strong> — Clear documentation, collaborative team player</li>
+            <li><strong>Time Management</strong> — Meet deadlines, prioritize tasks efficiently</li>
+            <li><strong>Attention to Detail</strong> — Write clean, maintainable code with best practices</li>
+            <li><strong>Adaptability</strong> — Quick learner, comfortable with new tech stacks</li>
+            <li><strong>Teamwork</strong> — Work effectively in agile teams, code reviews, mentoring</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RIGHT -->
+      <aside>
+        <div class="card panel reveal">
+          <h3>Contact</h3>
+          <p class="muted">Looking for backend or full-stack roles. I respond quickly to interview requests.</p>
+          <div style="margin-top:12px">
+            <div class="center">
+              <div class="muted">Email</div>
+              <div style="margin-left:auto;font-weight:700">laxmibhadrapur596@gmail.com</div>
+            </div>
+            <div class="center" style="margin-top:8px">
+              <div class="muted">Koliwad Hubli Dharawad-580023</div>
+              <div style="margin-left:auto">India</div>
+            </div>
+          </div>
+
+          <form id="contactForm" style="margin-top:12px" aria-label="Contact form">
+            <input id="name" placeholder="Your name" required />
+            <input id="email" placeholder="Email address" type="email" required />
+            <textarea id="message" placeholder="Message (quick intro + role you're offering)"></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn">Send</button>
+            </div>
+            
+          </form><small class="muted" style="margin-top:6px;display:block" style="display: center;">For Client</small>
+        </div>
+
+        <div class="card panel reveal" style="margin-top:18px">
+          <h3>Tech & Tools</h3>
+          <div class="tech-list" style="margin-top:8px">
+            <span class="tech">Java</span>
+            <span class="tech">Spring Boot</span>
+            <span class="tech">REST</span>
+            <span class="tech">MySQL</span>
+            <span class="tech">Hibernate</span>
+            <span class="tech">HTML/CSS</span>
+            <span class="tech">JS</span>
+            <span class="tech">Docker</span>
+            <span class="tech">Git</span>
+          </div>
+        </div>
+
+        <div class="card panel reveal" style="margin-top:18px">
+          <h3>Availability</h3>
+          <p class="muted">Open to full-time roles and freelance backend work. Prefer remote or hybrid roles.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Laxmi Bhadrapur — Built with HTML, CSS & JavaScript</div>
+    </footer>
+  </div>
+
+  <!-- Project modal -->
+  <div class="modal-backdrop" id="modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="modalTitle">Project</h3>
+        <button class="close-btn" id="closeModal">Close ✕</button>
+      </div>
+      <div class="meta" id="modalMeta">Tech • Role • Date</div>
+      <p id="modalContent">Details</p>
+      <div style="margin-top:12px; display:flex; gap:8px">
+        <a id="modalRepo" class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+        <a id="modalDemo" class="btn secondary" href="#" target="_blank" rel="noopener">Live Demo</a>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
