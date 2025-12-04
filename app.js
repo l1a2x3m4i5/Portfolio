@@ -32,7 +32,7 @@ window.addEventListener('load', showReveal);
 
 // Hide Tech & Tools panel when user scrolls down, show on scroll up
 // We find the panel by matching the heading text 'Tech & Tools' so HTML doesn't need changes
-const techPanel = Array.from($$('.panel')).find(p => (p.querySelector('h3')||{}).textContent?.trim().toLowerCase().includes('tech'));
+const techPanel = Array.from($$('.panel')).find(p => (p.querySelector('h3') || {}).textContent?.trim().toLowerCase().includes('tech'));
 if (techPanel) {
     // ensure panel starts on top so it fully covers underlying content
     techPanel.classList.add('is-on-top');
@@ -73,7 +73,7 @@ filterBtns.forEach(btn => {
         const items = $$('.project', projectsGrid);
         items.forEach(it => {
             const tags = it.getAttribute('data-tags');
-            if (f === 'all' || tags.includes(f)) {
+            if (f === 'all' || tags.toLowerCase().includes(f.toLowerCase())) {
                 it.style.display = '';
             } else it.style.display = 'none';
         });
