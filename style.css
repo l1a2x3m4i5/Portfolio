@@ -1,484 +1,292 @@
-:root {
-    /* Beginner student variable list (shortname -> original descriptive name)
-     --bg         -> page background color
-     --card       -> card / panel background color
-     --muted      -> muted text color
-     --accent     -> accent color (buttons, highlights)
-     --glass      -> glass overlay color
-     --light-bg   -> light theme page background
-     --light-card -> light theme card background
-     --light-muted-> light theme muted text
-     --light-accent-> light theme accent color
-     --radius     -> border radius for cards
-  */
-    --bg: #0f1724;
-    --card: #0b1220;
-    --muted: #94a3b8;
-    --accent: #6ee7b7;
-    --glass: rgba(255, 255, 255, 0.04);
-    --bg-image: url("https://img.freepik.com/premium-photo/gradient-real-teal-abstract-creative-background-design_851755-268207.jpg?semt=ais_hybrid&w=740&q=80");
-    --bg-pattern: radial-gradient(1200px 600px at 10% 10%, rgba(110, 231, 183, 0.06), transparent 10%), linear-gradient(180deg, rgba(14, 165, 140, 0.06), rgba(2, 6, 23, 0.12));
-
-
-    --light-bg: #f7f9fc;
-    --light-card: #ffffff;
-    --light-text: #1a2332;
-    --light-muted: #5b6574;
-    --light-accent: #0ea5a0;
-    --text-color: #e6eef6;
-    --radius: 14px;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-}
-
-
-:root[data-theme="light"] {
-    --bg: var(--light-bg);
-    --card: var(--light-card);
-    --text-color: var(--light-text);
-    --muted: var(--light-muted);
-    --accent: var(--light-accent);
-    --glass: rgba(0, 0, 0, 0.03);
-}
-
-/* ======================
-   Very simple reset
-   (beginner: this removes default margins)
-   ====================== */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html,
-body {
-    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
 }
 
 body {
-
-    background-color: var(--bg);
-    background-image: linear-gradient(rgba(2, 6, 23, 0.12), rgba(2, 6, 23, 0.04)), var(--bg-image), var(--bg-pattern);
-    background-size: cover, auto 450%, auto;
-    background-position: center, center, center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    color: var(--text-color);
-    line-height: 1.45;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* ======================
-   Header and container
-   (student comments: header is flex to lay out brand + nav)
-   ====================== */
-.container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 28px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e2e8f0;
+    line-height: 1.6;
 }
 
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 12px;
-}
-
-.brand {
-    display: flex;
-    gap: 12px;
     align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(10px);
 }
 
-.logo {
-    width: 56px;
-    height: 56px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, var(--accent), rgba(110, 231, 183, 0.3));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    color: var(--accent);
-    font-size: 20px;
-}
-
-.brand h1 {
-    font-size: 18px;
-}
-
-.brand p {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 2px;
-}
-
-nav {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+header h1 {
+    color: #38bdf8
 }
 
 nav a {
-    color: var(--muted);
+    margin-left: 25px;
     text-decoration: none;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 10px;
+    color: #e2e8f0;
+    transition: .3s
 }
 
 nav a:hover {
-    color: var(--accent);
-    background: var(--glass);
-}
-
-.theme-toggle {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 8px;
-    border-radius: 10px;
-    color: var(--muted);
-    cursor: pointer;
-}
-
-/* ======================
-   Main layout
-   ( grid with two columns on wide screens)
-   ====================== */
-main {
-    margin-top: 28px;
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 26px;
-}
-
-@media (max-width: 980px) {
-    main {
-        grid-template-columns: 1fr;
-        padding-bottom: 80px;
-    }
-
-    .container {
-        padding: 18px;
-    }
-}
-/*cards at the left column*/
-.card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 22px;
-    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+    color: #38bdf8
 }
 
 .hero {
+    min-height: 90vh;
     display: flex;
-    gap: 18px;
-    align-items: center;
-}
-
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--muted);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    align-items: center;
+    text-align: center;
+    padding: 0 20px
 }
 
-.intro h2 {
-    font-size: 20px;
-    margin-bottom: 6px;
+.hero h2 {
+    font-size: 56px;
+    background: linear-gradient(90deg, #38bdf8, #22c55e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.intro p {
-    color: var(--muted);
-    font-size: 14px;
+.hero p {
+    margin: 20px 0;
+    color: #94a3b8;
+    font-size: 20px
 }
 
-.cta {
-    margin-top: 14px;
+.buttons {
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 15px
 }
 
 .btn {
-    background: var(--accent);
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
     text-decoration: none;
+    transition: .3s
 }
 
-.btn.secondary {
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+.primary {
+    background: #38bdf8;
+    color: #020617
 }
 
-/* skills */
+.primary:hover {
+    transform: translateY(-3px)
+}
+
+.secondary {
+    border: 2px solid #38bdf8;
+    color: #38bdf8
+}
+
+.secondary:hover {
+    background: #38bdf8;
+    color: #020617
+}
+
+.section {
+    padding: 90px 8%
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #38bdf8
+}
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #94a3b8
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px
+}
+
+.stat {
+    background: #020617;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center
+}
+
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px
 }
 
 .skill {
-    padding: 8px 10px;
-    background: var(--glass);
-    border-radius: 10px;
-    color: var(--muted);
-    font-weight: 600;
-    font-size: 13px;
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: .3s
 }
 
-/* projects */
+.skill:hover {
+    transform: translateY(-6px);
+    border: 1px solid #38bdf8
+}
+
 .projects {
-    margin-top: 18px;
-}
-
-.projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch;
 }
 
-@media (max-width: 620px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+/* Ensure each project card's inner article stretches so action buttons align */
+.projects > .project {
+    display: flex;
+}
+.projects > .project > article.project {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #020617;
+    padding: 30px;
+    border-radius: 14px;
+    transition: .3s;
+}
+
+.projects > .project > article.project:hover {
+    transform: translateY(-8px);
 }
 
 .project {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    cursor: pointer;
-    transition: transform .22s ease, box-shadow .22s ease;
+    /* keep a safe default for other uses */
+}
+
+.project {
+    background: #624e66;
+    padding: 20px;
+    border-radius: 14px;
+    transition: .3s;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
 }
 
 .project:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(2, 6, 23, 0.6);
+    transform: translateY(-8px)
 }
 
-.project h4 {
-    margin-bottom: 6px;
-    font-size: 15px;
-}
-
-.project p {
-    font-size: 13px;
-    color: var(--muted);
-}
-
-.project .tags {
-    margin-top: 8px;
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.tag {
-    font-size: 12px;
-    padding: 6px 8px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.03);
-    color: var(--muted);
-}
-
-/* right column */
-aside .card {
-    position: sticky;
-    top: 40px;
-}
-
-.panel h3 {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-/* Panel stacking: ensure panels sit above main content when needed */
-.panel { position: relative; z-index: 1; }
-.panel.is-on-top { z-index: 12; }
-@media (min-width: 981px) {
-    /* only put the aside on top when layout is two-column (wide screens)
-       on small screens the aside should flow below main content so nothing is hidden */
-    aside { position: relative; z-index: 5; }
-}
-
-.contact p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
+.project h3 {
+    color: #22c55e
 }
 
 .tech {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent);
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-weight: 700;
-    color: var(--muted);
     font-size: 13px;
+    color: #38bdf8;
+    margin-top: 10px
 }
 
-/* contact form */
-form {
-    display: grid;
-    gap: 10px;
-    margin-top: 10px;
+/* Repository panel */
+.project-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
 }
 
-input,
-textarea {
+.repo-panel {
+    display: none;
+}
+
+.repo-panel.open {
+    display: inline-block;
+}
+
+/* Responsive: stack actions on small screens */
+@media (max-width: 640px) {
+    .project-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .repo-panel.open {
+        display: block;
+    }
+}
+
+.repo-toggle {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 10px;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    padding: 8px 12px;
     border-radius: 8px;
-    color: inherit;
-    outline: none;
+    width: max-content
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: var(--muted);
+.repo-toggle:hover {
+    background: #38bdf8;
+    color: #020617
 }
 
-textarea {
-    min-height: 110px;
-    resize: vertical;
+.repo-link {
+    background: #10b981;
+    color: #020617;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.github{
+    text-align: center;
+    color:#94a3b8;
+    font-size:18px;
+}
+.timeline {
+    max-width: 800px;
+    margin: auto
+}
+
+.timeline-item {
+    border-left: 3px solid #38bdf8;
+    padding-left: 20px;
+    margin-bottom: 25px
+}
+
+.contact {
+    text-align: center
+}
+
+.contact a {
+    margin: 10px 15px;
+    color: #38bdf8;
+    text-decoration: none
 }
 
 footer {
-    margin-top: 36px;
     text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    padding-bottom: 60px;
+    padding: 30px;
+    background: #020617;
+    margin-top: 60px
 }
 
-/* small UI bits (student: small helpers) */
-.filters {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-weight: 700;
-    color: var(--muted);
-    cursor: pointer;
-}
-
-.filter-btn.active {
-    background: var(--accent);
-    color: #012;
-}
-
-.download {
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.resume-badge {
-    font-weight: 700;
-    color: var(--muted);
-    font-size: 13px;
-    padding: 8px 10px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-/* modal */
-.modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(2, 6, 23, 0.6);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 60;
-}
-
-.modal {
-    background: var(--card);
-    max-width: 900px;
-    width: 100%;
-    border-radius: 12px;
-    padding: 20px;
-}
-
-.modal h3 {
-    margin-bottom: 8px;
-}
-
-.modal .meta {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-.close-btn {
-    background: transparent;
-    border: 0;
-    color: var(--muted);
-    font-weight: 700;
-    cursor: pointer;
-    padding: 6px 8px;
-    border-radius: 8px;
-}
-
-/* ------------------
-   Hide Tech panel
-   When user scrolls down this class is added by JS
-   and we animate it out of view (student-friendly)
-   ------------------ */
-.hide-tech {
+.fade {
+    opacity: 0;
     transform: translateY(20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 220ms ease, opacity 220ms ease;
+    transition: 1s
 }
 
-/* helpers and reveal animation */
-.muted {
-    color: var(--muted);
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: all .6s cubic-bezier(.2, .8, .2, 1);
-}
-
-.reveal.show {
+.fade.show {
     opacity: 1;
-    transform: none;
+    transform: translateY(0)
 }

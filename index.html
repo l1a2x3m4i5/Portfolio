@@ -1,218 +1,244 @@
-<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Laxmi B — Full-Stack (Java) Developer</title>
-  <meta name="description" content="Portfolio of a Java Backend & Full-Stack Developer — projects in Spring Boot, REST APIs, React, and JS.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laxmi Shekhappa Bhadrapura | Java Backend Developer</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container" id="page">
-    <header>
-      <div class="brand">
-        <div class="logo" style="color:gray">LB</div>
-        <div>
-          <h1>Laxmi Shekhappa Bhadrapur</h1>
-          <p class="muted" style="color:white">Java Backend • Full-Stack Developer — Spring Boot, REST, React, SQL</p>
-        </div>
+
+  <header>
+    <h1>Laxmi Shekhappa Bhadrapura</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Java Backend Developer</h2>
+    <p>Building scalable backend systems using Java, Spring Boot, Hibernate, REST APIs and MySQL.</p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn secondary" href="#contact">Hire Me</a>
+    </div>
+  </section>
+
+  <section class="section fade" id="about">
+    <h2>About Me</h2>
+    <p class="about">Backend developer focused on building reliable systems with Java and Spring Boot. Passionate about
+      solving problems, designing APIs and optimizing databases.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <h3>3+</h3>
+        <p>Projects Built</p>
       </div>
-
-      <nav aria-label="Main" >
-        <a href="#projects"  style="color:white">Projects</a>
-        <a href="#about" style="color:white">About</a>
-        <a href="#contact" style="color:white">Contact</a>
-        <button class="theme-toggle" id="themeToggle" title="Toggle light/dark"  style="color:white">Toggle theme</button>
-      </nav>
-    </header>
-
-    <main>
-      <!-- LEFT -->
-      <section>
-        <div class="card hero reveal">
-          <div style="display:flex;gap:18px">
-            <div class="avatar">LB</div>
-            <div class="intro">
-              <h2>Hi, I'm Laxmi — Java & Full-Stack Developer</h2>
-              <p>I build scalable backend systems with Spring Boot and craft responsive frontends using modern JS. I focus on clean APIs, tests, and production-ready deployments.</p>
-
-              <div class="cta">
-                <a class="btn secondary" href="mailto:laxmibhadrapur596@gmail.com">Email me</a>
-                <a class="btn secondary" href="https://www.linkedin.com/in/laxmi-shekhappa-bhadrapura-7ba01229a/" target="_blank" rel="opener">LinkedIn</a>
-                <a class="btn secondary" href="https://github.com/l1a2x3m4i5" target="_blank" rel="opener">GitHub</a>
-                <a class="resume-badge" href="https://drive.google.com/file/d/1nH2qLQFxwqGA19uXrpoX0iFqZNhfgGIk/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-         <!-- About -->
-        <div id="about" class="card reveal" style="margin-top:18px">
-          <h3>About me</h3>
-          <p class="muted">I'm a Java Developer who builds backend systems in Spring Boot and delivers full stack features. I write clean code, design RESTful APIs, add unit/integration tests, and ship to cloud with Docker. I'm actively learning scalable frontend patterns and TypeScript.</p>
-
-          <h4 style="margin-top:12px">What I bring</h4>
-          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
-            <li>Designing & implementing REST APIs (Spring Boot)</li>
-            <li>Database design & optimization (MySQL)</li>
-            <li>End-to-end features: DB → API → Frontend</li>
-            <li>Deployment basics: Docker</li>
-          </ul>
-        </div>
-
-        <div id="projects" class="card projects reveal" style="margin-top:18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3>Selected Projects</h3>
-            <div class="filters" aria-hidden>
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="backend">Backend</button>
-              <button class="filter-btn" data-filter="frontend">Frontend</button>
-              <button class="filter-btn" data-filter="fullstack">Fullstack</button>
-            </div>
-          </div>
-
-          <div class="projects-grid" id="projectsGrid">
-            <!-- Project 1 -->
-            <article class="project" data-tags="Fullstack" data-title="SalesSavvy E-Commerce Web App" data-repo="https://github.com/l1a2x3m4i5/SalesSavvyBackend" tabindex="0" role="button" aria-pressed="false">
-              <h4>SalesSavvy E-Commerce Web App</h4>
-              <p>Spring Boot service for online shopping & online payment integration (JWT auth, MySQL, scheduled jobs)</p>
-              <div class="tags">
-                <span class="tag">Spring Boot</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">JWT</span>
-                <span class="tag">HTML/JS</span>
-              </div>
-            </article>
-
-             <!-- Project 2 -->
-            <article class="project" data-tags="Fullstack" data-title="Airbnb Clone" data-repo="https://github.com/l1a2x3m4i5/Airbnb-Clone" tabindex="0" role="button" aria-pressed="false">
-              <h4>Airbnb Clone</h4>
-              <p>An online rental platform that allows users to list properties, explore available stays, make bookings, and leave reviews through a secure, database-driven system.</p>
-              <div class="tags">
-                <span class="tag">Node.js</span>
-                <span class="tag">Express.js</span>
-                <span class="tag">MongoDB</span>
-              </div>
-            </article>
-
-            <!-- Project 3 -->
-            <article class="project" data-tags="Fullstack" data-title="Image Steganography Using Python" data-repo="https://github.com/l1a2x3m4i5/Image-Steganography" tabindex="0" role="button" aria-pressed="false">
-              <h4>Image Steganography Using Python</h4>
-              <p>Hiding sensitive information within an ordinary, non-secret file or message, so that it will not be detected.</p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JS</span>
-              </div>
-            </article>
-
-
-            <!-- Project 4 -->
-            <article class="project" data-tags="backend" data-title="Employee Management System" data-repo="https://github.com/l1a2x3m4i5/Employee-Management-System">
-              <h4>Employee Management System</h4>
-              <p>Java Swing + Hibernate + MySQL for CRUD plus REST layer for web clients.</p>
-              <div class="tags"><span class="tag">Hibernate</span><span class="tag">MySQL</span></div>
-            </article>
-
-            <!-- Project 5 -->
-            <article class="project" data-tags="frontend" data-title="Portfolio Website" data-repo="https://github.com/l1a2x3m4i5/Portfolio">
-              <h4>Personal Portfolio</h4>
-              <p>Custom responsive site using semantic HTML, CSS, and JS. Accessible & optimized.</p>
-              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-              </article>
-              <!-- Project 6 -->
-            <article class="project" data-tags="frontend" data-title="Movie Search Web App" data-repo="https://github.com/l1a2x3m4i5/OMDB_Movie-API">
-              <h4>Movie Search Web App</h4>
-              <p>Custom responsive site using semantic HTML, CSS, and JS. Accessible & optimized.</p>
-              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-          </div>
-        </div>
-
-       
-
-        <!-- Tech Skills -->
-        <div class="card reveal" style="margin-top:18px">
-          <h3>Tech Skills</h3>
-          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
-            <li><strong>Backend</strong> — Java, Python, Spring Boot, REST APIs, Hibernate, MySQL, MongoDB</li>
-            <li><strong>Frontend</strong> — HTML, CSS, JavaScript, React</li>
-            <li><strong>Database</strong> — MySQL, MongoDB, SQL optimization</li>
-            <li><strong>Tools & Platforms</strong> — Git, Docker, Maven, Postman</li>
-          </ul>
-        </div>
-
-        <!-- Soft Skills -->
-        <div class="card reveal" style="margin-top:18px">
-          <h3>Soft Skills</h3>
-          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
-            <li><strong>Problem Solving</strong> — Break down complex problems, design scalable solutions</li>
-            <li><strong>Communication</strong> — Clear documentation, collaborative team player</li>
-            <li><strong>Time Management</strong> — Meet deadlines, prioritize tasks efficiently</li>
-            <li><strong>Attention to Detail</strong> — Write clean, maintainable code with best practices</li>
-            <li><strong>Adaptability</strong> — Quick learner, comfortable with new tech stacks</li>
-            <li><strong>Teamwork</strong> — Work effectively in agile teams, code reviews, mentoring</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- RIGHT -->
-      <aside>
-        <div class="card panel reveal">
-          <h3>Contact</h3>
-          <p class="muted">Looking for backend or full-stack roles. I respond quickly to interview requests.</p>
-          <div style="margin-top:12px">
-            <div class="center">
-              <div class="muted">Email</div>
-              <div style="margin-left:auto;font-weight:700">laxmibhadrapur596@gmail.com</div>
-            </div>
-            <div class="center" style="margin-top:8px">
-              <div class="muted">Koliwad Hubli Dharawad-580023</div>
-              <div style="margin-left:auto">India</div>
-            </div>
-          </div>
-
-          <form id="contactForm" style="margin-top:12px" aria-label="Contact form">
-            <input id="name" placeholder="Your name" required />
-            <input id="email" placeholder="Email address" type="email" required />
-            <textarea id="message" placeholder="Message (quick intro + role you're offering)"></textarea>
-            <div style="display:flex;gap:8px">
-              <button type="submit" class="btn">Send</button>
-            </div>
-            
-          </form><small class="muted" style="margin-top:6px;display:block" style="display: center;">For Client</small>
-        </div>
-
-        <div class="card panel reveal" style="margin-top:18px">
-          <h3>Availability</h3>
-          <p class="muted">Open to full-time roles. Prefer remote or hybrid roles.</p>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      <div class="muted">© <span id="year"></span> Laxmi Bhadrapur — Built with HTML, CSS & JavaScript</div>
-    </footer>
-  </div>
-
-  <!-- Project modal -->
-  <div class="modal-backdrop" id="modal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <h3 id="modalTitle">Project</h3>
-        <button class="close-btn" id="closeModal">Close ✕</button>
+      <div class="stat">
+        <h3>110+</h3>
+        <p>DSA Problems</p>
       </div>
-      <div class="meta" id="modalMeta">Tech • Role • Date</div>
-      <p id="modalContent">Details</p>
-      <div style="margin-top:12px; display:flex; gap:8px">
-        <a id="modalRepo" class="btn" href="#" target="_blank" rel="noopener">Repository</a>
-        <a id="modalDemo" class="btn secondary" href="#" target="_blank" rel="noopener">Live Demo</a>
+      <div class="stat">
+        <h3>Java</h3>
+        <p>Main Language</p>
+      </div>
+      <div class="stat">
+        <h3>Backend</h3>
+        <p>Specialization</p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section fade" id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+      <div class="skill">Java</div>
+      <div class="skill">Spring Boot</div>
+      <div class="skill">Hibernate</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">REST APIs</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Data Structures</div>
+      <div class="skill">OOP</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">React</div>
+      <div class="skill">Python</div>
+    </div>
+  </section>
+  <section class="section fade" id="resume">
+    <h2>Resume</h2>
+    <p class="about">You can view my resume to learn more about my experience, technical skills, and projects.</p>
+    <br>
+    <div class="contact">
+      <a class="btn secondary"
+        href="https://drive.google.com/file/d/18XpB4EDVzZhwawK37EFMPEBnBtKOMLta/view?usp=drive_link"
+        target="_blank">View Resume</a>
+    </div>
+
+  </section>
+
+  <section class="section fade" id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <article class="project" data-tags="Fullstack" data-title="SalesSavvy E-Commerce Web App"
+          data-repo="https://github.com/l1a2x3m4i5/SalesSavvyBackend" tabindex="0" role="button" aria-pressed="false">
+          <h3>SalesSavvy E-Commerce Web App</h3>
+          <p>Spring Boot service for online shopping & online payment integration (JWT auth, MySQL, scheduled jobs)</p>
+          <div class="tech">Java • Spring Boot • Hibernate • MySQL</div>
+          <div class="project-actions">
+            <button class="btn repo-toggle" type="button">Click here</button>
+            <div class="repo-panel" aria-hidden="true">
+              <a class="btn repo-link" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="project">
+        <article class="project" data-tags="backend" data-title="Employee Management System"
+          data-repo="https://github.com/l1a2x3m4i5/Employee-Management-System">
+          <h3>Employee Management System</h3>
+          <p>Java Swing + Hibernate + MySQL for CRUD plus REST layer for web clients.</p>
+          <div class="tech">Java swing • Hibernate • MySQL</div>
+          <div class="project-actions">
+            <button class="btn repo-toggle" type="button">Click here</button>
+            <div class="repo-panel" aria-hidden="true">
+              <a class="btn repo-link" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="project">
+        <article class="project" data-tags="Fullstack" data-title="Airbnb Clone"
+          data-repo="https://github.com/l1a2x3m4i5/Airbnb-Clone" tabindex="0" role="button" aria-pressed="false">
+          <h3>Airbnb Clone</h3>
+          <p>An online rental platform that allows users to list properties, explore available stays, make bookings, and
+            leave reviews through a secure, database-driven system.</p>
+          <div class="tech">Node.js • Express.js • MongoDB</div>
+          <div class="project-actions">
+            <button class="btn repo-toggle" type="button">Click here</button>
+            <div class="repo-panel" aria-hidden="true">
+              <a class="btn repo-link" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="project">
+        <article class="project" data-tags="Fullstack" data-title="Image Steganography Using Python"
+          data-repo="https://github.com/l1a2x3m4i5/Image-Steganography" tabindex="0" role="button" aria-pressed="false">
+          <h3>Image Steganography Using Python</h3>
+          <p>Hiding sensitive information within an ordinary, non-secret file or message, so that it will not be
+            detected.</p>
+          <div class="tech">Python • Algorithms • Problem Solving</div>
+          <div class="project-actions">
+            <button class="btn repo-toggle" type="button">Click here</button>
+            <div class="repo-panel" aria-hidden="true">
+              <a class="btn repo-link" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="project">
+        <article class="project" data-tags="frontend" data-title="Movie Search Web App"
+          data-repo="https://github.com/l1a2x3m4i5/OMDB_Movie-API">
+          <h3>Movie Search Web App</h3>
+          <p>Custom responsive site using semantic HTML, CSS, and JS. Accessible & optimized.</p>
+          <div class="tech">HTML • CSS • JavaScript</div>
+          <div class="project-actions">
+            <button class="btn repo-toggle" type="button">Click here</button>
+            <div class="repo-panel" aria-hidden="true">
+              <a class="btn repo-link" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="project">
+        <article class="project" data-tags="frontend" data-title="Portfolio Website"
+          data-repo="https://github.com/l1a2x3m4i5/Portfolio">
+          <h3>Personal Portfolio</h3>
+          <p>Custom responsive site using semantic HTML, CSS, and JS. Accessible & optimized.</p>
+          <div class="tech">HTML • CSS • JavaScript</div>
+          <div class="project-actions">
+            <button class="btn repo-toggle" type="button">Click here</button>
+            <div class="repo-panel" aria-hidden="true">
+              <a class="btn repo-link" href="#" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section fade" id="journey">
+    <h2>Learning Journey</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Started Programming</h4>
+        <p>Learned Java fundamentals and OOP.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h4>Backend Development</h4>
+        <p>Built applications using Spring Boot and MySQL.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h4>Problem Solving</h4>
+        <p>Practicing data structures and algorithms for interviews.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section fade" id="github">
+    <h2>GitHub Activity</h2>
+    <p class="github">
+      Explore my repositories to see backend applications built using Java, Spring Boot, Hibernate, and MySQL.
+    </p>
+    <div class="contact" style="margin-top:12px">
+      <a class="btn secondary" href="https://github.com/l1a2x3m4i5" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </section>
+
+
+  <section class="section fade" id="contact">
+    <h2>Contact</h2>
+
+    <div class="contact">
+      <a href="mailto:laxmibhadrapur596@gmail.com">Email</a>
+      <a href="https://github.com/l1a2x3m4i5">GitHub</a>
+      <a href="https://www.linkedin.com/in/laxmi-shekhappa-bhadrapura-7ba01229a/">LinkedIn</a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Laxmi Bhadrapur • Java Backend Developer</p>
+  </footer>
+
   <script src="app.js"></script>
+
 </body>
+
 </html>
